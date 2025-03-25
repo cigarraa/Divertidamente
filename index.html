@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divertidamnete🧠</title>
+    <style>
+        .personalidade{
+            width: 600px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+            margin: 20px auto;
+            font-family: Arial, Helvetica, sans-serif ;
+            transition: all 0.3s ease;
+            font-size: 40px;
+        }
+
+        .alegria{
+            background-image: url("alegria.jpg");
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nojo{
+            background-image: url("nojinho.png");
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .raiva{
+            background-image: url("raiva.png");
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .botoes{
+            text-align: center;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .alegre{
+            background-color: rgb(252, 252, 93);
+            border: 5px solid rgb(252, 252, 3);
+            color: blue;
+        }
+
+        .nojeira{
+            background-color: rgb(70, 250, 70);
+            border: 5px solid green;
+            color: rgb(2, 66, 2);
+        }
+
+        .raivoso{
+            background-color: rgb(247, 75, 75);
+            border: 5px solid red;
+            color: rgb(117, 3, 3);
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" class="personalidade">seu divertidamente:</div>
+    <div class="botoes">
+         <div class="alegria" onclick="mudar('alegre')"></div>
+         <div class="nojo" onclick="mudar('nojeira')"></div>
+         <div class="raiva" onclick="mudar('raivoso')"></div>
+    </div>
+    
+    <script>
+        function mudar(divertidamente){
+            const caixa = document.getElementById("caixa");
+            caixa.className = "personalidade";
+            caixa.classList.add(divertidamente);
+            caixa.textContent = `seu divertidamente: ${divertidamente.charAt(0).toUpperCase()+divertidamente.slice(1)}`
+        }
+    </script>
+</body>
+</html>
